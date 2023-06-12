@@ -1,0 +1,24 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    padding: 3rem 0;
+    border-bottom: 1rem solid v.$primario;
+    &__grid{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        @include m.tablet { 
+            flex-direction: row;
+           justify-content: space-between; 
+        }
+    }
+    &__copyright{
+        text-align: center;
+        font-size: 2.4rem;
+        margin-top: 3rem;
+        @include m.tablet { 
+            margin-top: 0;
+        }
+    }
+}

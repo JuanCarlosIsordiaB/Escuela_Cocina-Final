@@ -1,0 +1,32 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.nosotros{
+    padding: 5rem 0;
+    &__heading{
+        @include m.heading;
+    }
+
+    &__grid{
+        @include m.tablet { 
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__bloque{
+        text-align: center;
+        padding: 1rem;
+        &:hover{
+            background-color: v.$primario;
+            border-radius: 25%;
+        }
+    }
+
+    &__imagen{
+        margin: 0 auto;
+    }
+
+    &__bloque-heading{
+        font-weight: 700;
+    }
+}
